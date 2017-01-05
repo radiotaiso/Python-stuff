@@ -1,13 +1,10 @@
 #/bin/python
 
-#  llenamelo --config
-# llenamelo --tablita actividades
-# llenamelo --tablita proyecto
-# llenamelo --
-# llenamelo --actividades
-#SAVING FOR LATER https://atom.io/packages/atom-pair
+#https://docs.python.org/3/library/configparser.html
+#https://docs.python.org/2/library/configparser.html
+import configparser
 from optparse import OptionParser
-
+#Requerir el archivo de config, si no existe, prompt user/pass y crear uno
 
 class NoNovaOptsParser(OptionParser):
     def __init__(self):
@@ -20,6 +17,11 @@ class NoNovaOptsParser(OptionParser):
                   help="Print your personal project options with ID, This requires CONF FILE ")
         self.add_option("-papu",
                   help="saca el pack papu")
+def NoNovaConfigParser:
+    configp = configparser.ConfigParser
+    #Si el archivo existe leerlo
+        configp.read("nonovaconfig.cfg")
+    #else crearlo:
 
 def tablitaActividades():
     print "You will be required the activity ID"
@@ -31,7 +33,7 @@ def tablitaActividades():
 def tablitaProyectos:
     #Login with default
     #Request Projects
-    #Save
+    #Save it in the same config file as the user/pass? and request it everytime "llenamelo.py" runs
 def config():
     leyendo de este pedo, aqui ando
 
