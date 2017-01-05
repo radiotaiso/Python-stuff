@@ -1,5 +1,9 @@
 #/bin/python
 
+#PREREQUISITES TO RUN THIS THING
+# -ConfigParser
+# -nova-cli? or will it be hosted in tchai? if tchai true, we need to make it public
+
 #https://docs.python.org/3/library/configparser.html
 #https://docs.python.org/2/library/configparser.html
 import configparser
@@ -17,11 +21,20 @@ class NoNovaOptsParser(OptionParser):
                   help="Print your personal project options with ID, This requires CONF FILE ")
         self.add_option("-papu",
                   help="saca el pack papu")
-def NoNovaConfigParser:
+def NoNovaConfigParserConfig:
     configp = configparser.ConfigParser
     #Si el archivo existe leerlo
         configp.read("nonovaconfig.cfg")
     #else crearlo:
+def NoNovaConfigParserCreate:
+        print('Creating new text file...')
+        try:
+            file = open("nonovaconfig.ini",'a')   # the "a" this will create the file if the file does not exist, but will not truncate the existing file.
+            file.close()
+        except:
+            print('Something went wrong! Can\'t tell what?')
+            sys.exit(0) # quit Python
+    write()
 
 def tablitaActividades():
     print "You will be required the activity ID"
@@ -35,21 +48,10 @@ def tablitaProyectos:
     #Request Projects
     #Save it in the same config file as the user/pass? and request it everytime "llenamelo.py" runs
 def config():
-    leyendo de este pedo, aqui ando
-
 
 def test():
-    todo el modulo pero, con debug mietnras lo estoy haciendo
 
 def main()
-
-
-
-
-
-    llamas funciones
-    haces objetos
-
 if __name__ == "__main__":
 
 
