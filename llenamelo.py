@@ -6,12 +6,11 @@
 # llenamelo --
 # llenamelo --actividades
 #SAVING FOR LATER https://atom.io/packages/atom-pair
-VOY
 from optparse import OptionParser
 
 
 class NoNovaOptsParser(OptionParser):
-    def __init__(self):#arre, abajo puse nuestro debraye de como sería el flow un poco más acomodado, como pseudo code line 70
+    def __init__(self):
         usage = "usage %prog [OPTIONS]"
         self.add_option("-c" "--la-conf", dest="config",
                   help="Set config file with user:pass")
@@ -19,23 +18,25 @@ class NoNovaOptsParser(OptionParser):
                   help="Print the activity options with ID")
         self.add_option("-P", "--de-proyectos",
                   help="Print your personal project options with ID, This requires CONF FILE ")
+        self.add_option("-papu",
+                  help="saca el pack papu")
 
-Atom tendrá esto?
-Live xtreme programming verga,
-WAIT. LO ENCONTRÉ!
-jajaja
-te lo escribi en
-skype
+def tablitaActividades():
+    print "You will be required the activity ID"
+    print "------------------------------------"
+    actividades = {1:"Coding",2:"Meeting w/Client",3:"Design",4:"Meeting",5:"Support",6:"Training",7:"Fix/Debug",8:"Project Hours",9:"Research",11:"Project Review",12:"Project Management",13:"Architect",14:"Testing / QA",15:"Estimation",16:"PTO",17:"Holiday",18:"Analysis",19:"UI Graphic Design",20:"Code Redesign",21:"iTexico MX Task",23:"Interviewing",24:"Recruting",25:"Documentation",26:"Environment Setup",27:"Technical Advising",28:"TL",29:"Vacation"}
+    for key in actividades:
+        print key,"......",actividades[key]
 
-
+def tablitaProyectos:
+    #Login with default
+    #Request Projects
+    #Save
 def config():
     leyendo de este pedo, aqui ando
 
 
-def test()
-
-
-
+def test():
     todo el modulo pero, con debug mietnras lo estoy haciendo
 
 def main()
