@@ -4,7 +4,6 @@
 # -ConfigParser
 # -nova-cli? or will it be hosted in tchai? if tchai true, we need to make it public
 
-#https://docs.python.org/3/library/configparser.html
 #https://docs.python.org/2/library/configparser.html
 import configparser
 from optparse import OptionParser
@@ -23,9 +22,10 @@ class NoNovaOptsParser(OptionParser):
                   help="saca el pack papu")
 def NoNovaConfigParserConfig:
     configp = configparser.ConfigParser
-    #Si el archivo existe leerlo
+    if nonovaconfig == True: #Checks if nonovaconifg file exists
         configp.read("nonovaconfig.cfg")
-    #else crearlo:
+    else: #Creates nonovaconfig file if not found
+        NoNovaConfigParserCreate():
 def NoNovaConfigParserCreate:
         print('Creating new text file...')
         try:
